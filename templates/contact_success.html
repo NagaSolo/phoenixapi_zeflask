@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form action = "http://localhost:5000/contact" method = get>
+            <fieldset>
+                <legend>Form submission successful !!!</legend>
+                {{ form.hidden_tag() }}
+                
+                <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+                    <h3>{{ form.name.label }} : {{ form.name }}</h3>
+                    
+                    <h3>{{ form.Gender.label }} : {{ form.Gender }}</h3>
+                  
+                    <h3>{{ form.Address.label }} : {{ form.Address }}</h3>
+                  
+                    <h3>{{ form.email.label }} : {{ form.email }}</h3>
+                  
+                    <h3>{{ form.Age.label }} : {{ form.Age }}</h3>
+                  
+                    <h3>{{ form.language.label }} : {{ form.language }}</h3>
+
+                </div>
+               
+            </fieldset>
+        </form>
+    </body>
+</html>
