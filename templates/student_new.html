@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Students - Zeflask</h3>
+        <hr/>
+        
+        {%- for category, message in get_flashed_messages(with_categories = true) %}
+        <div class = "alert alert-danger">
+            {{ message }}
+        </div>
+        {%- endfor %}
+        
+        <form method = "POST" action = "/new">
+            {{ form.csrf_token }}
+            <fieldset class="form-field">
+                {{ form.name.label }}
+                {{ form.name(size=20) }}
+            </fieldset>
+            
+            <fieldset class="form-field">
+                {{ form.city.label }}
+                {{ form.city(size=20) }}
+            </fieldset>
+            
+            <fieldset class="form-field">
+                {{ form.address.label }}
+                {{ form.address(size=35) }}
+            </fieldset>
+            
+            <fieldset class="form-field">
+                {{ form.pin.label }}
+                {{ form.pin(size=10) }}
+            </fieldset>
+            
+            {{ form.submit }}
+        </form>
+    </body>
+</html>
